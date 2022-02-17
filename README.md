@@ -1,1 +1,1 @@
-# learning-ruby-appium-ios
+# poc-automation-ruby-httparty
