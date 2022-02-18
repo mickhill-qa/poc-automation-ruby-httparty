@@ -1,0 +1,8 @@
+dev:
+  api_reqres.in: ''
+
+qa:
+  api_reqres.in: 'https://reqres.in'
+
+prod:
+  api_reqres.in: ''
