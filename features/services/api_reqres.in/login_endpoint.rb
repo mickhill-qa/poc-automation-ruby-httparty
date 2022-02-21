@@ -1,18 +1,22 @@
-class LoginEndpoint < EndpointHTTPartyHelper
-    
-    base_uri BASE_URL['api_reqres.in']
+class LoginEndpoint < ApiReqresIn
 
-    def prepare_body_login(_email, _senha)
-        json = load_contract_api("api_reqres.in/login")
-        json["email"]    = _email
-        json["password"] = _senha
-        json.to_json
+    attr_reader   :path
+    attr_accessor :email
+    attr_accessor :senha
+
+    def initialize
+        @path = "/api/login"
+        super
     end
 
-    def send_request(_body)
-        self.class.post("/api/login", 
-            :headers => {"Content-Type": "application/json"},
-            :body => _body
+    def send_request_api
+        json             = load_contract_api("api_reqres.in/login")
+        json["email"]    = email
+        json["password"] = senha
+        self.class.post(
+          @path,
+          :headers => {"Content-Type": "application/json"},
+          :body => json.to_json
         )
     end
 

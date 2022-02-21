@@ -3,6 +3,9 @@
 @service_login
 Funcionalidade: Endpoint /api/login
 
+    Contexto:
+        Dado que o cliente possui o Endpoint /api/login
+
     @service_login_successful
     Cenario: LOGIN - SUCCESSFUL
         Quando o cliente faz uma request com dados validos

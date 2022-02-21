@@ -33,3 +33,17 @@ Dir[File.join(
 ].each do |file|
   require_relative file
 end
+
+## API Base Class
+Dir[File.join(
+  File.dirname(__FILE__), '/api_base_class/*.rb')
+].each do |file|
+  require_relative file
+end
+
+## Services
+Dir[File.join(
+  File.dirname(__FILE__), '../services/*.rb')
+].each do |file|
+  require file
+end

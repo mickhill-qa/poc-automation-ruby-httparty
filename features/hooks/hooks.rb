@@ -5,7 +5,7 @@
 
 # After do |scenario|
 #   scenario_name = scenario.name.gsub(/[^\w\-]/, ' ')
-
+#
 #   if scenario.failed?
 #   end
 # end
