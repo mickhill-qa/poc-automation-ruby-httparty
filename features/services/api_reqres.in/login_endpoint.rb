@@ -1,6 +1,6 @@
 class LoginEndpoint < EndpointHTTPartyHelper
     
-    base_uri ENVIRONMENT['api_reqres.in']
+    base_uri BASE_URL['api_reqres.in']
 
     def prepare_body_login(_email, _senha)
         json = load_contract_api("api_reqres.in/login")

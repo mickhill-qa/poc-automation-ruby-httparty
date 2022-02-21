@@ -5,12 +5,13 @@ at_exit do
     config.report_path      = REPORT_PATH + Time.now.strftime('%Y-%m-%d_-_%H-%M-%S_-_').to_s + SELECTED_ENV + "_" + 'api'        # pasta onde salva o html
     config.report_types     = [:html]                                                                                            # tipo de report a exportar
     config.report_title     = "poc-automation-ruby-httparty"                                                                     # nome do report - <img src='#' />
-    config.color            = "orange"                                                                                             # cor do report
+    config.color            = "orange"                                                                                           # cor do report
     config.compress_images  = false
     config.include_images   = true                                                                                               # coloca imagens ou não
     config.additional_info  = {
       'Date': Time.now,
       'Environment': SELECTED_ENV,
+      'Url': BASE_URL,
       'Runtime': "ruby - #{RUBY_VERSION}"
     }
   end

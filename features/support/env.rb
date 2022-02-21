@@ -24,6 +24,7 @@ end
 
 ## Defaults
 ENVIRONMENT = YAML.load_file(File.dirname(__FILE__) + "/config/environments.yml")[SELECTED_ENV]
+BASE_URL    = ENVIRONMENT['base_url']
 REPORT_PATH = "reports/report-builder/"
 
 ## Helpers
