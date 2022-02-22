@@ -1,0 +1,14 @@
+dev:
+  base_url:
+    api_reqres.in: ''
+    api_viacep: ''
+
+qa:
+  base_url:
+    api_reqres.in: 'https://reqres.in'
+    api_viacep: 'http://viacep.com.br'
+
+prod:
+  base_url:
+    api_reqres.in: ''
+    api_viacep: ''
