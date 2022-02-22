@@ -1,18 +1,19 @@
-#language: pt
 #encoding: utf-8
-@service_login
-Funcionalidade: Endpoint /api/login
+#language: pt
+@api_reqres
+@api_reqres_login
+Funcionalidade: api_reqres.in: /api/login
 
     Contexto:
-        Dado que o cliente possui o Endpoint /api/login
+        Dado que o cliente possui o Endpoint /api/login da api_reqres.in
 
-    @service_login_successful
+    @api_reqres_login_successful
     Cenario: LOGIN - SUCCESSFUL
-        Quando o cliente faz uma request com dados validos
-        Entao a API devolve o status 200
-        E a API devolve um token
+        Quando o cliente faz uma request com dados validos a api_reqres.in
+        Entao a api_reqres.in devolve o status 200
+        E a api_reqres.in devolve um token
 
-    @service_login_unsuccessful
+    @api_reqres_login_unsuccessful
     Cenario: LOGIN - UNSUCCESSFUL
-        Quando o cliente faz uma request com dados invalidos
-        Entao a API devolve o status 400
+        Quando o cliente faz uma request com dados invalidos a api_reqres.in
+        Entao a api_reqres.in devolve o status 400
