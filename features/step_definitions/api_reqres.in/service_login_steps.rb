@@ -13,6 +13,7 @@ end
 
 Entao('a API devolve o status {int}') do |code_expect|
   expect(@response.code).to eql code_expect
+  log @response.code
 end
 
 Entao('a API devolve um token') do

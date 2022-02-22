@@ -1,8 +1,8 @@
 class LoginEndpoint < ApiReqresIn
 
-    attr_reader   :path
     attr_accessor :email
     attr_accessor :senha
+    attr_reader   :path
 
     def initialize
         @path = "/api/login"
