@@ -1,14 +1,8 @@
 dev:
-  base_url:
-    api_reqres.in: ''
-    api_viacep: ''
+  base_url: ''
 
 qa:
-  base_url:
-    api_reqres.in: 'https://reqres.in'
-    api_viacep: 'http://viacep.com.br'
+  base_url: 'https://reqres.in'
 
 prod:
-  base_url:
-    api_reqres.in: ''
-    api_viacep: ''
+  base_url: ''
