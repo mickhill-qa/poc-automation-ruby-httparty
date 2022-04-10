@@ -1,3 +1,4 @@
+# A classe LoginEndpoint representa um endpoint API Reqres.in.
 class LoginEndpoint < ServicesHTTPartyHelper
 
   attr_accessor :email
@@ -10,7 +11,7 @@ class LoginEndpoint < ServicesHTTPartyHelper
 
   def send_request_api
     headers_endpoint['Content-Type'] = 'application/json'
-    body_endpoint['email']    = email
+    body_endpoint['email'] = email
     body_endpoint['password'] = password
     self.class.post(
       @path_endpoint,

@@ -4,8 +4,8 @@
 # Include the regular Gemfile
 eval File.read('Gemfile')
 
-gem 'rubycritic', require: false
 gem 'solargraph'
 gem 'rubocop'
 gem 'debase'
 gem 'ruby-debug-ide'
+gem 'rubycritic', require: false

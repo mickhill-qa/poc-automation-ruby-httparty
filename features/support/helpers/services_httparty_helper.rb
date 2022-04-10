@@ -1,3 +1,4 @@
+# Helpes de base para todos os Endpoints
 class ServicesHTTPartyHelper
 
   include HTTParty
@@ -18,12 +19,13 @@ class ServicesHTTPartyHelper
     @body_endpoint = {}
     # Verifica o preenchimento do path_endpoint
     if @path_endpoint.blank?
+      @path_endpoint = ''
       raise "\nErro no `@path_endpoint' do #{self.class.name}\n./features/services/...\n\n"
     end
   end
 
-  def load_contract_api(_json_name)
-    path_file = './features/contracts/' + _json_name + '.json'
+  def load_contract_api(json_file)
+    path_file = './features/contracts/' + json_file
     JSON.parse(File.read(path_file))
   end
 
