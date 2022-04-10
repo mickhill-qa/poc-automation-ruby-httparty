@@ -1,3 +1,4 @@
+# A classe RegisterEndpoint representa um endpoint API Reqres.in.
 class RegisterEndpoint < ServicesHTTPartyHelper
 
   attr_accessor :email
@@ -11,7 +12,7 @@ class RegisterEndpoint < ServicesHTTPartyHelper
   def send_request_api
     headers_endpoint['Content-Type'] = 'application/json'
     body_endpoint['email'] = email
-    body_endpoint['password']  = password
+    body_endpoint['password'] = password
     self.class.post(
       @path_endpoint,
       :headers => headers_endpoint,
