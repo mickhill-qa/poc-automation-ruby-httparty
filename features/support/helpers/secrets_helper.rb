@@ -1,3 +1,4 @@
+# Helper de load de secrets => Pode ser substituido pelo AWS Secret Manager
 module SecretsHelper
   def get_secrets
     data = File.read(

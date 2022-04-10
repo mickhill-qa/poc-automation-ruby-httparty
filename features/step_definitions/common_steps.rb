@@ -14,8 +14,7 @@ end
 
 E('o endpoint {string} no response devolve um token') do |endpoint|
   token = JSON.parse( @response.body )['token']
-  token_exist = !( token.nil? )
-  expect( token_exist ).to eql true
+  expect_true_data( token )
   log token
 end
 

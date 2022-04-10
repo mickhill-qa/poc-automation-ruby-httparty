@@ -18,8 +18,7 @@ end
 
 E('o endpoint "\/register" no response devolve um id') do
   id = JSON.parse( @response.body )['id']
-  id_exist = !( id.nil? )
-  expect( id_exist ).to eql true
+  expect_true_data( id )
   log id
 end
 
