@@ -1,9 +1,10 @@
+# frozen_string_literal: true
+
 ## Contexto
 Dado('que o cliente possui o Endpoint de \/register da api_reqres.in') do
   @endpoint_register = RegisterEndpoint.new
   print_log @endpoint_register.path_endpoint
 end
-
 
 ## Fluxo Base
 # @api_reqres_register_baseflow
@@ -17,13 +18,11 @@ E('o cliente faz a request ao \/register') do
 end
 
 E('o endpoint "\/register" no response devolve um id') do
-  id = JSON.parse( @response.body )['id']
-  expect_true_data_exist( id )
+  id = JSON.parse(@response.body)['id']
+  expect_true_data_exist(id)
 end
 
-
 ## Fluxo Alternativo
-
 
 ## Fluxo de Excecao
 # @api_reqres_register_execao_01

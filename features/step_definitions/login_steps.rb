@@ -1,9 +1,10 @@
+# frozen_string_literal: true
+
 ## Contexto
 Dado('que o cliente possui o Endpoint de \/login da api_reqres.in') do
   @endpoint_login = LoginEndpoint.new
   print_log @endpoint_login.path_endpoint
 end
-
 
 ## Fluxo Base
 # @api_reqres_login_baseflow
@@ -16,9 +17,7 @@ E('o cliente faz a request ao \/login') do
   @response = @endpoint_login.send_request_api
 end
 
-
 ## Fluxo Alternativo
-
 
 ## Fluxo de Excecao
 # @api_reqres_login_execao_01

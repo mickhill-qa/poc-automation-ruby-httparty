@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Helpes de base para todos os Endpoints
 class ServicesHTTPartyHelper
   include HTTParty
