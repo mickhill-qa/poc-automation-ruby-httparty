@@ -1,7 +1,7 @@
 ## Contexto
 Dado('que o cliente possui o Endpoint de \/login da api_reqres.in') do
   @endpoint_login = LoginEndpoint.new
-  log @endpoint_login.path_endpoint
+  print_log @endpoint_login.path_endpoint
 end
 
 

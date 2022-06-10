@@ -1,7 +1,7 @@
 ## Contexto
 Dado('que o cliente possui o Endpoint de \/register da api_reqres.in') do
   @endpoint_register = RegisterEndpoint.new
-  log @endpoint_register.path_endpoint
+  print_log @endpoint_register.path_endpoint
 end
 
 
@@ -18,8 +18,7 @@ end
 
 E('o endpoint "\/register" no response devolve um id') do
   id = JSON.parse( @response.body )['id']
-  expect_true_data( id )
-  log id
+  expect_true_data_exist( id )
 end
 
 
