@@ -1,8 +1,8 @@
+# frozen_string_literal: true
+
 # Helpes de base para todos os Endpoints
 class ServicesHTTPartyHelper
-
   include HTTParty
-  include SecretsHelper
 
   # http_proxy "", 8080                       ## Proxy para acessos de APIs externos
   # debug_output $stdout                      ## Depuracao das requiseicao HTTP
@@ -10,23 +10,15 @@ class ServicesHTTPartyHelper
   format :json
   base_uri BASE_URL
 
-  attr_reader :headers_endpoint
-  attr_reader :body_endpoint
-  attr_reader :path_endpoint
+  attr_reader :headers_api, :path_endpoint
 
   def initialize
-    @headers_endpoint = {}
-    @body_endpoint = {}
-    # Verifica o preenchimento do path_endpoint
-    if @path_endpoint.blank?
-      @path_endpoint = ''
-      raise "\nErro no `@path_endpoint' do #{self.class.name}\n./features/services/...\n\n"
-    end
+    @headers_api = {}
+    @path_endpoint = "@path_endpoint NAO ESPECIFICADA: `#{self.class.name}::initialize`" if @path_endpoint.blank?
   end
 
-  def load_contract_api(json_file)
-    path_file = './features/contracts/' + json_file
+  def load_contract_api(json_name)
+    path_file = "./features/contracts/#{json_name}.json"
     JSON.parse(File.read(path_file))
   end
-
 end

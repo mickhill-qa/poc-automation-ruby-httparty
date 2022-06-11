@@ -5,12 +5,8 @@ detectors:
 
   UtilityFunction:
     exclude:
-      - "SecretsHelper#get_secrets"
-      - "ServicesHTTPartyHelper#load_contract_api"
-
-  NilCheck:
-    exclude:
-      - "StepsHelper"
+      - "SecretsHelper"
+      - "ServicesHTTPartyHelper"
 
   Attribute:
     exclude:

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ### Global ###
 # Before do
 #     log 'Inicio de todos os Cenarios.'
@@ -9,7 +11,6 @@
 #   if scenario.failed?
 #   end
 # end
-
 
 ### Tag ###
 # Before '@pesquisaUndefined' do
