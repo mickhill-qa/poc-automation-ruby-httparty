@@ -39,10 +39,10 @@ Funcionalidade: api_reqres.in: /login
     E o endpoint "/login" devolve um response
     E o endpoint "/login" no response devolve o erro "Missing password"
 
-  @api_reqres_login_execao_04
-  Cenario: LOGIN - PASSWORD invalido
-    Quando o cliente informa o EMAIL e PASSWORD "invalido" ao /login
-    E o cliente faz a request ao /login
-    Entao o endpoint "/login" devolve o status 400
-    E o endpoint "/login" devolve um response
-    E o endpoint "/login" no response devolve o erro "Missing password"
+  # @api_reqres_login_execao_04
+  # Cenario: LOGIN - PASSWORD invalido
+  #   Quando o cliente informa o EMAIL e PASSWORD "invalido" ao /login
+  #   E o cliente faz a request ao /login
+  #   Entao o endpoint "/login" devolve o status 400
+  #   E o endpoint "/login" devolve um response
+  #   E o endpoint "/login" no response devolve o erro "Missing password"

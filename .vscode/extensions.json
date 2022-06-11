@@ -1,0 +1,21 @@
+{
+  "recommendations": [
+    "rebornix.ruby",
+    "mateuszdrewniak.ruby-runner",
+    "groksrc.ruby",
+    "castwide.solargraph",
+    "vayan.haml",
+    "wingrunr21.vscode-ruby",
+    "alexkrechik.cucumberautocomplete",
+    "stevejpurves.cucumber",
+    "blodwynn.featurehighlight",
+    "aravindkumar.gherkin-indent",
+    "pkief.material-icon-theme",
+    "eamodio.gitlens",
+    "mhutchie.git-graph",
+    "donjayamanne.githistory",
+    "davidanson.vscode-markdownlint",
+    "janisdd.vscode-edit-csv",
+    "ms-vscode.live-server"
+  ]
+}
