@@ -397,3 +397,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/ruby,windows,linux,macos,rubymine,rubymine+all,rubymine+iml,vscode,sublimetext
+
+# Mick Hill - Nao se deve guardadar secrets no projeto...
+/features/support/config/secrets.json
