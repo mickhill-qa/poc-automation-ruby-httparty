@@ -22,6 +22,11 @@ jobs:
       - name: Configure git repository
         uses: actions/checkout@v3
 
+      - name: Decrypt secrets
+        run: ./secret_decrypt.sh
+        env:
+          LARGE_SECRET_PASSPHRASE: ${{ secrets.LARGE_SECRET_PASSPHRASE }}
+
       - name: Configure Ruby 2.7
         uses: ruby/setup-ruby@359bebbc29cbe6c87da6bc9ea3bc930432750108
         with:
